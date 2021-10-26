@@ -15,3 +15,4 @@ export class BookService{
         return fetch(`${this.url}/${id}`).then(value => value.img.src)
     }
 }
+

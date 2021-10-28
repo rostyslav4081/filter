@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.book{
+    display: flex;
+    justify-content: space-between;
+    background-color: #80ccff;
+    height: 300px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.book_img {
+    width: 80px;
+    height: 90px;
+}
+
+
+

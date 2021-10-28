@@ -11,8 +11,6 @@ export class BookService{
     getBookByID(id){
         return fetch(`${this.url}/${id}`).then(value => value.json()).then(value => value);
     }
-    getBookImg(id){
-        return fetch(`${this.url}/${id}`).then(value => value.img.src)
-    }
+
 }
 

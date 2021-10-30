@@ -7,15 +7,8 @@
     align-items: center;
     position: fixed;
 }
-#btn{
-    margin-left: 10px;
-    font-size: 20px;
-    width: 100px;
-    background-color: #ffffff;
-    border-radius: 13px ;
-    cursor: pointer;
-}
-#search_bar{
+
+input{
     font-size: 20px;
     border-radius: 13px;
 }
@@ -26,11 +19,4 @@ select{
     font-size: 20px;
     border-radius: 13px;
     margin-right: 10px ;
-}
-#regex{
-    width: 15px;
-    height: 15px;
-}
-.check_box > label{
-    font-size: 17px;
 }

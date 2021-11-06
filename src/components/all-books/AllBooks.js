@@ -1,32 +1,33 @@
 import React, {Component} from 'react';
 import Book from "../book/Book";
-import {BookService} from "../../services/BookService";
+
 import './AllBook.css'
 
 class AllBooks extends Component {
-    bookService = new BookService();
-    state = {books: []};
+
 
     render() {
-        let {books} = this.state;
+        let {books} = this.props;
+        console.log(books);
+        let size = Math.ceil(books.length/3)
         return (
 
             <div className={"all_books"}>
                 <div className={"col"}>
                     {
-                        books.slice(0, 75).map(book => <Book item={book} key={book.id}/>)
+                        books.slice(0, size).map(book => <Book item={book} key={book.id}/>)
 
                     }
                 </div>
                 <div className={"col"}>
                     {
-                        books.slice(75, 150).map(book => <Book item={book} key={book.id}/>)
+                        books.slice(size, 2*size).map(book => <Book item={book} key={book.id}/>)
 
                     }
                 </div>
                 <div className={"col"}>
                     {
-                        books.slice(150, 225).map(book => <Book item={book} key={book.id}/>)
+                        books.slice(2*size, books.length).map(book => <Book item={book} key={book.id}/>)
                     }
                 </div>
             </div>
@@ -34,9 +35,7 @@ class AllBooks extends Component {
         );
     }
 
-    componentDidMount() {
-        this.bookService.getAllBooks().then(value => this.setState({books: value}));
-    }
+
 
 }
 

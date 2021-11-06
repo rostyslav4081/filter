@@ -20,3 +20,11 @@ select{
     border-radius: 13px;
     margin-right: 10px ;
 }
+button{
+    margin-left: 10px;
+    font-size: 20px;
+    width: 100px;
+    background-color: #ffffff;
+    border-radius: 13px ;
+    cursor: pointer;
+}
